@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meridian — World Time</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="wrap">
+  <header>
+    <div>
+      <p class="brand-eyebrow">My time</p>
+      <h1>What time is it,<br>anywhere?</h1>
+    </div>
+    <p class="tagline">A live read on the planet's current spin — pick any country and watch where it sits between night and noon.</p>
+  </header>
+
+  <div class="add-bar">
+    <form id="add-form" autocomplete="off">
+      <input id="search-input" type="text" placeholder="Add a country — try “Japan” or “Brazil”…" aria-label="Search for a country to add" />
+      <button type="submit">Add clock</button>
+    </form>
+    <div class="suggestions" id="suggestions" role="listbox"></div>
+  </div>
+
+  <div class="strip-section">
+    <p class="strip-label"><span>The day, right now</span><span id="strip-utc"></span></p>
+    <div class="strip-outer">
+      <div class="strip" id="strip"></div>
+    </div>
+  </div>
+
+  <div class="cards" id="cards"></div>
+</div>
+
+<footer>Times update every second using each location's primary national timezone. Some countries span multiple zones — shown here is the zone of the capital or largest city. </footer>
+
+<p style="text-align: center; margin-top: 60px;">all rights preserved to habiba salman &copy; 2026</p>
+
+<script src="script.js"></script>
+
+</body>
+</html>
